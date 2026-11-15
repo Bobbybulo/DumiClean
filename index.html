@@ -174,10 +174,11 @@
       </a>
 
       <!-- Navigation ordinateur -->
-      <nav aria-label="Navigation principale" class="hidden md:block">
+      <nav aria-label="Navigation principale" class="hidden lg:block">
         <ul class="flex items-center gap-8 text-sm font-semibold text-slate-600">
           <li><a href="#services" class="nav-link">Services</a></li>
           <li><a href="#engagements" class="nav-link">Engagements</a></li>
+          <li><a href="#realisations" class="nav-link">Réalisations</a></li>
           <li><a href="#zone" class="nav-link">Zone</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
@@ -190,7 +191,7 @@
           <span class="hidden xs:inline sm:hidden">Appeler</span>
           <span class="hidden sm:inline">06 68 90 93 38</span>
         </a>
-        <button id="menu-toggle" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-navy hover:bg-slate-100 focus:outline-none focus-visible:ring-4 focus-visible:ring-aqua/30 md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
+        <button id="menu-toggle" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-navy hover:bg-slate-100 focus:outline-none focus-visible:ring-4 focus-visible:ring-aqua/30 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
           <svg id="icon-open" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
           <svg id="icon-close" class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
         </button>
@@ -198,11 +199,12 @@
     </div>
 
     <!-- Menu mobile (déroulant) -->
-    <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white shadow-lg md:hidden">
+    <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white shadow-lg lg:hidden">
       <nav aria-label="Navigation mobile" class="container-site py-3">
         <ul class="divide-y divide-slate-100 text-base font-semibold text-navy">
           <li><a href="#services" class="flex items-center justify-between py-3.5">Services <span class="text-aqua" aria-hidden="true">→</span></a></li>
           <li><a href="#engagements" class="flex items-center justify-between py-3.5">Engagements <span class="text-aqua" aria-hidden="true">→</span></a></li>
+          <li><a href="#realisations" class="flex items-center justify-between py-3.5">Réalisations <span class="text-aqua" aria-hidden="true">→</span></a></li>
           <li><a href="#zone" class="flex items-center justify-between py-3.5">Zone d'intervention <span class="text-aqua" aria-hidden="true">→</span></a></li>
           <li><a href="#contact" class="flex items-center justify-between py-3.5">Contact <span class="text-aqua" aria-hidden="true">→</span></a></li>
         </ul>
@@ -499,6 +501,77 @@
           <div>
             <h3 class="text-lg font-bold">Des produits éco-responsables</h3>
             <p class="mt-1 text-sm leading-relaxed text-slate-300 sm:text-base">Nous privilégions des produits respectueux de l'environnement, de vos équipes et de vos occupants, sans compromis sur le résultat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION RÉALISATIONS (photos réelles de chantiers)
+         ========================================================== -->
+    <section id="realisations" class="bg-slate-50 py-20 md:py-28">
+      <div class="container-site">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="eyebrow">Nos réalisations</p>
+          <h2 class="section-title">Des résultats qui se voient</h2>
+          <p class="mt-4 text-lg text-slate-600">Quelques interventions récentes, photographiées sur le terrain.</p>
+        </div>
+
+        <div class="mx-auto mt-14 max-w-5xl space-y-6">
+          <!-- Avant / Après : cabine de douche -->
+          <figure class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl shadow-slate-200/60">
+            <div class="grid grid-cols-2 gap-1 bg-white">
+              <div class="relative">
+                <img src="images/realisation-douche-avant.webp" alt="Paroi de douche couverte de calcaire, avant l'intervention de DumiClean" width="800" height="800" loading="lazy" class="aspect-square w-full object-cover sm:aspect-[4/3]">
+                <span class="absolute left-3 top-3 rounded-full bg-navy/85 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white sm:left-4 sm:top-4 sm:text-sm">Avant</span>
+              </div>
+              <div class="relative">
+                <img src="images/realisation-douche-apres.webp" alt="Cabine de douche propre avec vitre transparente, après l'intervention de DumiClean" width="800" height="800" loading="lazy" class="aspect-square w-full object-cover sm:aspect-[4/3]">
+                <span class="absolute left-3 top-3 rounded-full bg-aqua px-3 py-1 text-xs font-bold uppercase tracking-wider text-navy sm:left-4 sm:top-4 sm:text-sm">Après</span>
+              </div>
+            </div>
+            <figcaption class="p-5 sm:p-6">
+              <p class="font-bold text-navy">Cabine de douche entartrée</p>
+              <p class="mt-1 text-sm leading-relaxed text-slate-600">Détartrage de la paroi vitrée et nettoyage du receveur : la vitre retrouve toute sa transparence.</p>
+            </figcaption>
+          </figure>
+
+          <div class="grid gap-6 sm:grid-cols-2">
+            <!-- Sol en marbre (pendant l'intervention) -->
+            <figure class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl shadow-slate-200/60">
+              <div class="relative">
+                <img src="images/realisation-marbre.webp" alt="Nettoyage en profondeur d'un sol en marbre dans un hall d'entrée par DumiClean" width="1000" height="750" loading="lazy" class="aspect-[4/3] w-full object-cover">
+                <span class="absolute left-3 top-3 rounded-full bg-navy/85 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white sm:left-4 sm:top-4 sm:text-sm">En cours</span>
+              </div>
+              <figcaption class="p-5 sm:p-6">
+                <p class="font-bold text-navy">Hall d'entrée en marbre</p>
+                <p class="mt-1 text-sm leading-relaxed text-slate-600">Nettoyage en profondeur du sol : la couleur de l'eau parle d'elle-même.</p>
+              </figcaption>
+            </figure>
+
+            <!-- Moquette d'escalier (partie nettoyée / partie non traitée) -->
+            <figure class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl shadow-slate-200/60">
+              <div class="relative">
+                <img src="images/realisation-moquette.webp" alt="Marche d'escalier en moquette : partie nettoyée par DumiClean à gauche, partie non traitée à droite" width="900" height="675" loading="lazy" class="aspect-[4/3] w-full object-cover">
+                <!-- Repère de la limite entre zone nettoyée et zone non traitée -->
+                <span aria-hidden="true" class="absolute left-[60%] top-[28%] h-[50%] border-l-2 border-dashed border-white/90"></span>
+                <span class="absolute left-3 top-3 rounded-full bg-aqua px-3 py-1 text-xs font-bold uppercase tracking-wider text-navy sm:left-4 sm:top-4 sm:text-sm">Après</span>
+                <span class="absolute right-3 top-3 rounded-full bg-navy/85 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white sm:right-4 sm:top-4 sm:text-sm">Avant</span>
+              </div>
+              <figcaption class="p-5 sm:p-6">
+                <p class="font-bold text-navy">Moquette d'escalier</p>
+                <p class="mt-1 text-sm leading-relaxed text-slate-600">À gauche la partie nettoyée, à droite la moquette avant notre passage.</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Appel à l'action -->
+          <div class="flex flex-col items-center justify-center gap-4 pt-4 text-center sm:flex-row">
+            <p class="text-lg font-semibold text-navy">Envie du même résultat chez vous&nbsp;?</p>
+            <a href="#devis" class="btn btn-primary w-full sm:w-auto">
+              Demander un devis gratuit
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
           </div>
         </div>
       </div>
@@ -807,6 +880,7 @@
         <ul class="mt-4 space-y-3 text-sm">
           <li><a href="#services" class="hover:text-aqua">Services</a></li>
           <li><a href="#engagements" class="hover:text-aqua">Engagements</a></li>
+          <li><a href="#realisations" class="hover:text-aqua">Réalisations</a></li>
           <li><a href="#zone" class="hover:text-aqua">Zone d'intervention</a></li>
           <li><a href="#contact" class="hover:text-aqua">Contact &amp; devis</a></li>
         </ul>
@@ -941,7 +1015,7 @@
         link.addEventListener('click', function () { setMenu(false); });
       });
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
-      window.matchMedia('(min-width: 768px)').addEventListener('change', function (e) { if (e.matches) setMenu(false); });
+      window.matchMedia('(min-width: 1024px)').addEventListener('change', function (e) { if (e.matches) setMenu(false); });
 
       /* ---------- 4. Lien actif dans le menu selon la section visible ---------- */
       var navLinks = document.querySelectorAll('.nav-link');
@@ -954,7 +1028,7 @@
             });
           });
         }, { rootMargin: '-45% 0px -50% 0px' });
-        ['accueil', 'services', 'engagements', 'zone', 'contact'].forEach(function (id) {
+        ['accueil', 'services', 'engagements', 'realisations', 'zone', 'contact'].forEach(function (id) {
           var section = document.getElementById(id);
           if (section) observer.observe(section);
         });
