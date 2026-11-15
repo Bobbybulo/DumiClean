@@ -92,7 +92,8 @@
           },
           colors: {
             navy: { DEFAULT: '#0F172A', light: '#1E293B' },          // Bleu marine : sérieux
-            aqua: { DEFAULT: '#0EA5E9', dark: '#0369A1', light: '#E0F2FE', pale: '#F0F9FF' } // Cyan : fraîcheur
+            aqua: { DEFAULT: '#0EA5E9', dark: '#0369A1', light: '#E0F2FE', pale: '#F0F9FF' }, // Cyan : fraîcheur
+            logo: '#1A71AE' // Bleu du logo DumiClean
           }
         }
       }
@@ -166,10 +167,10 @@
     <div class="container-site flex h-16 items-center justify-between gap-3 md:h-20">
 
       <!-- Logo -->
-      <a href="#accueil" class="flex shrink-0 items-center gap-2.5" aria-label="DUMICLEAN, retour en haut de page">
+      <a href="#accueil" class="flex shrink-0 items-center gap-2.5" aria-label="DumiClean, retour en haut de page">
         <!-- Icône du logo (fond transparent) -->
         <img src="images/logo-icone.webp" alt="" width="290" height="144" class="h-8 w-auto md:h-11">
-        <span class="text-lg font-extrabold tracking-tight text-navy xs:text-xl">DUMI<span class="text-aqua">CLEAN</span></span>
+        <span class="font-display text-xl font-bold tracking-tight text-logo xs:text-2xl">DumiClean</span>
       </a>
 
       <!-- Navigation ordinateur -->
@@ -772,11 +773,10 @@
     <div class="container-site grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
       <!-- Marque -->
       <div>
-        <a href="#accueil" class="flex items-center gap-2.5" aria-label="DUMICLEAN, retour en haut de page">
-          <span class="flex items-center rounded-xl bg-white px-2.5 py-1.5">
-            <img src="images/logo-icone.webp" alt="" width="290" height="144" class="h-8 w-auto" loading="lazy">
-          </span>
-          <span class="text-xl font-extrabold tracking-tight text-white">DUMI<span class="text-aqua">CLEAN</span></span>
+        <!-- Logo sur pastille blanche : le bleu du logo reste lisible sur le fond marine -->
+        <a href="#accueil" class="inline-flex items-center gap-2.5 rounded-xl bg-white px-3 py-2" aria-label="DumiClean, retour en haut de page">
+          <img src="images/logo-icone.webp" alt="" width="290" height="144" class="h-8 w-auto" loading="lazy">
+          <span class="font-display text-xl font-bold tracking-tight text-logo">DumiClean</span>
         </a>
         <p class="mt-4 text-sm leading-relaxed">Entreprise de nettoyage professionnel pour particuliers et entreprises dans le Bas Chablais et le Pays de Gavot.</p>
       </div>
