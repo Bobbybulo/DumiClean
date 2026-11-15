@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ==========================================================
+       SEO LOCAL
+       - Title : ~60 caractères, mots-clés + zone + marque
+       - Description : ~155 caractères, bénéfices + appel à l'action
+       ========================================================== -->
+  <title>Entreprise de nettoyage Bas Chablais &amp; Pays de Gavot | DUMICLEAN</title>
+  <meta name="description" content="Nettoyage de bureaux, copropriétés, fin de chantier et vitres dans le Bas Chablais et le Pays de Gavot. Produits éco-responsables. Devis gratuit : 06 68 90 93 38">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="DUMICLEAN">
+
+  <!-- Géolocalisation : Haute-Savoie (74) -->
+  <meta name="geo.region" content="FR-74">
+  <meta name="geo.placename" content="Bas Chablais, Pays de Gavot">
+
+  <!-- À activer dès que le nom de domaine est connu -->
+  <!-- <link rel="canonical" href="https://www.votre-domaine.fr/"> -->
+
+  <!-- Open Graph : aperçu lors d'un partage (Facebook, WhatsApp, LinkedIn…) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="DUMICLEAN">
+  <meta property="og:title" content="DUMICLEAN – Nettoyage professionnel Bas Chablais &amp; Pays de Gavot">
+  <meta property="og:description" content="Bureaux, copropriétés, remise en état après travaux, lavage de vitres. Particuliers et entreprises. Devis gratuit et intervention rapide.">
+  <!-- <meta property="og:url" content="https://www.votre-domaine.fr/"> -->
+  <!-- <meta property="og:image" content="https://www.votre-domaine.fr/apercu-1200x630.jpg"> -->
+
+  <meta name="theme-color" content="#0F172A">
+
+  <!-- Favicon (goutte d'eau) intégré en SVG : aucun fichier externe nécessaire -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230F172A'/%3E%3Cpath d='M16 5.5c-3.8 4.6-7 8.4-7 12.3a7 7 0 0 0 14 0c0-3.9-3.2-7.7-7-12.3z' fill='%230EA5E9'/%3E%3C/svg%3E">
+
+  <!-- Données structurées LocalBusiness : aident Google à afficher l'entreprise
+       dans les résultats locaux. Ajoutez "url" et "address" complète dès que possible. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "DUMICLEAN",
+    "description": "Entreprise de nettoyage professionnel pour particuliers et entreprises : entretien de bureaux, copropriétés et parties communes, remise en état après travaux, lavage de vitres.",
+    "telephone": "+33 6 68 90 93 38",
+    "email": "dumiclean@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Haute-Savoie",
+      "addressCountry": "FR"
+    },
+    "areaServed": [
+      { "@type": "Place", "name": "Bas Chablais" },
+      { "@type": "Place", "name": "Pays de Gavot" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Prestations de nettoyage",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entretien régulier de bureaux" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nettoyage de copropriétés et parties communes" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Remise en état après travaux" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lavage de vitres" } }
+      ]
+    }
+  }
+  </script>
+
+  <!-- ==========================================================
+       TAILWIND CSS (CDN) + couleurs de la marque
+       ========================================================== -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        // Points de rupture redéfinis pour ajouter "xs" (petits smartphones) dans le bon ordre
+        screens: { xs: '380px', sm: '640px', md: '768px', lg: '1024px', xl: '1280px', '2xl': '1536px' },
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#0F172A', light: '#1E293B' },          // Bleu marine : sérieux
+            aqua: { DEFAULT: '#0EA5E9', dark: '#0369A1', light: '#E0F2FE', pale: '#F0F9FF' } // Cyan : fraîcheur
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Composants réutilisables (boutons, champs, liens…) -->
+  <style type="text/tailwindcss">
+    @layer base {
+      html { scroll-padding-top: 4.5rem; -webkit-tap-highlight-color: transparent; }
+      @media (min-width: 768px) { html { scroll-padding-top: 5.5rem; } }
+      @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+      body { @apply bg-white text-slate-700 antialiased; }
+      ::selection { @apply bg-aqua text-navy; }
+    }
+
+    @layer components {
+      .container-site { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+      .eyebrow { @apply text-xs font-bold uppercase tracking-[0.2em] text-aqua-dark sm:text-sm; }
+      .section-title { @apply mt-3 text-3xl font-extrabold tracking-tight text-navy sm:text-4xl; }
+
+      /* Boutons */
+      .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-base font-bold transition duration-200 focus:outline-none focus-visible:ring-4 active:scale-[0.98]; }
+      .btn-primary { @apply bg-aqua text-navy shadow-lg shadow-aqua/30 hover:bg-sky-400 focus-visible:ring-aqua/40; }
+      .btn-dark { @apply bg-navy text-white hover:bg-navy-light focus-visible:ring-navy/30; }
+      .btn-ghost { @apply border border-white/25 bg-white/5 text-white hover:bg-white/10 focus-visible:ring-white/30; }
+
+      /* Liens de navigation avec soulignement animé */
+      .nav-link { @apply relative py-2 transition-colors hover:text-navy; }
+      .nav-link::after { content: ''; @apply absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 rounded-full bg-aqua transition-transform duration-300; }
+      .nav-link:hover::after, .nav-link.is-active::after { @apply scale-x-100; }
+      .nav-link.is-active { @apply text-navy; }
+
+      /* Formulaire */
+      .field-label { @apply mb-1.5 block text-sm font-semibold text-navy; }
+      .field { @apply block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-navy shadow-sm transition placeholder:text-slate-400 focus:border-aqua focus:outline-none focus:ring-4 focus:ring-aqua/20; }
+
+      /* Messages de retour du formulaire */
+      .form-status { @apply rounded-xl border p-4 text-sm leading-relaxed; }
+      .status-success { @apply border-emerald-200 bg-emerald-50 text-emerald-900; }
+      .status-error { @apply border-red-200 bg-red-50 text-red-900; }
+      .status-info { @apply border-sky-200 bg-sky-50 text-sky-900; }
+
+      /* Repère visuel des informations à compléter dans les mentions légales */
+      .a-completer { @apply rounded bg-amber-100 px-1 font-medium text-amber-900; }
+    }
+  </style>
+
+  <!-- Styles hors Tailwind : fond de la modale, animation des repères sur la carte -->
+  <style>
+    dialog::backdrop { background: rgba(15, 23, 42, .75); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+    @keyframes pulse-ring { 0% { transform: scale(.5); opacity: .55; } 100% { transform: scale(2.6); opacity: 0; } }
+    .pulse-ring { transform-box: fill-box; transform-origin: center; animation: pulse-ring 2.4s ease-out infinite; }
+    #mobile-cta { padding-bottom: max(.75rem, env(safe-area-inset-bottom)); }
+    @media (prefers-reduced-motion: reduce) {
+      .pulse-ring { animation: none; opacity: 0; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+
+<body class="pb-20 md:pb-0">
+
+  <!-- Lien d'évitement (accessibilité clavier) -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:font-semibold focus:text-navy focus:shadow-lg">Aller au contenu principal</a>
+
+  <!-- ==========================================================
+       EN-TÊTE FIXE
+       ========================================================== -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-white transition-shadow duration-300">
+    <div class="container-site flex h-16 items-center justify-between gap-3 md:h-20">
+
+      <!-- Logo -->
+      <a href="#accueil" class="flex shrink-0 items-center gap-2.5" aria-label="DUMICLEAN, retour en haut de page">
+        <svg class="h-9 w-9 md:h-10 md:w-10" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="9" fill="#0F172A"/>
+          <path d="M16 5.5c-3.8 4.6-7 8.4-7 12.3a7 7 0 0 0 14 0c0-3.9-3.2-7.7-7-12.3z" fill="#0EA5E9"/>
+          <path d="M12.6 18.6a3.6 3.6 0 0 0 3.2 3.4" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <span class="text-lg font-extrabold tracking-tight text-navy xs:text-xl">DUMI<span class="text-aqua">CLEAN</span></span>
+      </a>
+
+      <!-- Navigation ordinateur -->
+      <nav aria-label="Navigation principale" class="hidden md:block">
+        <ul class="flex items-center gap-8 text-sm font-semibold text-slate-600">
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#engagements" class="nav-link">Engagements</a></li>
+          <li><a href="#zone" class="nav-link">Zone</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Bouton d'appel + menu burger -->
+      <div class="flex items-center gap-2">
+        <a href="tel:+33668909338" class="btn btn-primary px-4 py-2.5 text-sm md:px-5 md:py-3" aria-label="Appeler DUMICLEAN au 06 68 90 93 38">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="hidden xs:inline sm:hidden">Appeler</span>
+          <span class="hidden sm:inline">06 68 90 93 38</span>
+        </a>
+        <button id="menu-toggle" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-navy hover:bg-slate-100 focus:outline-none focus-visible:ring-4 focus-visible:ring-aqua/30 md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
+          <svg id="icon-open" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu mobile (déroulant) -->
+    <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white shadow-lg md:hidden">
+      <nav aria-label="Navigation mobile" class="container-site py-3">
+        <ul class="divide-y divide-slate-100 text-base font-semibold text-navy">
+          <li><a href="#services" class="flex items-center justify-between py-3.5">Services <span class="text-aqua" aria-hidden="true">→</span></a></li>
+          <li><a href="#engagements" class="flex items-center justify-between py-3.5">Engagements <span class="text-aqua" aria-hidden="true">→</span></a></li>
+          <li><a href="#zone" class="flex items-center justify-between py-3.5">Zone d'intervention <span class="text-aqua" aria-hidden="true">→</span></a></li>
+          <li><a href="#contact" class="flex items-center justify-between py-3.5">Contact <span class="text-aqua" aria-hidden="true">→</span></a></li>
+        </ul>
+        <a href="#devis" class="btn btn-dark mt-3 w-full">Demander un devis gratuit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ==========================================================
+         SECTION HÉRO
+         ========================================================== -->
+    <section id="accueil" class="relative overflow-hidden bg-navy pb-24 pt-24 text-white md:pb-36 md:pt-40">
+      <!-- Décor : halos lumineux, trame de points, bulles -->
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+        <div class="absolute -right-24 -top-32 h-[28rem] w-[28rem] rounded-full bg-aqua/25 blur-3xl"></div>
+        <div class="absolute -bottom-40 -left-24 h-[24rem] w-[24rem] rounded-full bg-sky-400/10 blur-3xl"></div>
+        <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 28px 28px;"></div>
+        <!-- Bulles décoratives (masquées sur mobile pour ne pas gêner la lecture) -->
+        <div class="hidden lg:block">
+          <span class="absolute left-[4%] top-[18%] h-3 w-3 rounded-full border border-white/30"></span>
+          <span class="absolute left-[52%] top-[12%] h-2 w-2 rounded-full bg-aqua/60"></span>
+          <span class="absolute bottom-[18%] left-[44%] h-5 w-5 rounded-full border border-aqua/40"></span>
+          <span class="absolute right-[3%] top-[62%] h-2.5 w-2.5 rounded-full bg-white/30"></span>
+        </div>
+      </div>
+
+      <div class="container-site relative grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
+        <!-- Accroche -->
+        <div class="lg:col-span-7">
+          <!-- Le H1 associe mots-clés locaux (SEO) et promesse client (conversion) -->
+          <h1>
+            <span class="mb-5 flex w-fit items-center gap-2 rounded-full border border-aqua/30 bg-aqua/10 px-3.5 py-1.5 text-xs font-semibold text-sky-300 sm:text-sm">
+              <svg class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Nettoyage professionnel · Bas Chablais &amp; Pays de Gavot
+            </span>
+            <span class="block text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
+              Des locaux impeccables, <span class="text-aqua">sans effort</span> de votre part.
+            </span>
+          </h1>
+
+          <p class="mt-5 max-w-2xl text-base leading-relaxed text-slate-300 xs:text-lg sm:mt-6 sm:text-xl">
+            Bureaux, copropriétés, fin de chantier ou vitres : <strong class="font-semibold text-white">DUMICLEAN</strong> prend en charge la propreté de vos espaces dans le <strong class="font-semibold text-white">Bas Chablais</strong> et le <strong class="font-semibold text-white">Pays de Gavot</strong>, pour les particuliers comme pour les entreprises.
+          </p>
+
+          <!-- Appels à l'action -->
+          <div class="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row">
+            <a href="#devis" class="btn btn-primary w-full px-7 py-4 text-lg sm:w-auto">
+              Demander un devis gratuit
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="tel:+33668909338" class="btn btn-ghost w-full px-7 py-4 text-lg sm:w-auto">
+              <svg class="h-5 w-5 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Appeler maintenant
+            </a>
+          </div>
+
+          <!-- Points forts -->
+          <ul class="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-slate-300 sm:text-base">
+            <li class="flex items-center gap-2">
+              <span class="flex h-6 w-6 items-center justify-center rounded-full bg-aqua/15 text-aqua"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+              Devis gratuit et rapide
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="flex h-6 w-6 items-center justify-center rounded-full bg-aqua/15 text-aqua"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+              Produits éco-responsables
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="flex h-6 w-6 items-center justify-center rounded-full bg-aqua/15 text-aqua"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+              Intervention rapide
+            </li>
+          </ul>
+        </div>
+
+        <!-- Carte "Votre devis en 3 étapes" : lève les freins à la prise de contact -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md rounded-3xl bg-white p-6 text-navy shadow-2xl shadow-black/40 sm:p-8">
+            <span class="absolute -top-3.5 right-6 rounded-full bg-aqua px-4 py-1.5 text-xs font-bold text-navy shadow-md">100 % gratuit</span>
+            <p class="eyebrow">Simple et rapide</p>
+            <p class="mt-1 text-2xl font-extrabold tracking-tight">Votre devis en 3 étapes</p>
+
+            <ol class="mt-6 space-y-5">
+              <li class="flex gap-4">
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-navy font-bold text-white">1</span>
+                <div>
+                  <p class="font-bold">Vous nous contactez</p>
+                  <p class="text-sm text-slate-600">Par téléphone ou via le formulaire, en 2 minutes.</p>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-navy font-bold text-white">2</span>
+                <div>
+                  <p class="font-bold">Nous évaluons votre besoin</p>
+                  <p class="text-sm text-slate-600">Un échange, ou une visite sur place si nécessaire, pour un devis précis.</p>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-aqua font-bold text-navy">3</span>
+                <div>
+                  <p class="font-bold">Nous intervenons</p>
+                  <p class="text-sm text-slate-600">Selon votre planning, en ponctuel ou en régulier.</p>
+                </div>
+              </li>
+            </ol>
+
+            <a href="tel:+33668909338" class="btn btn-dark mt-7 w-full">
+              <svg class="h-5 w-5 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              06 68 90 93 38
+            </a>
+            <p class="mt-3 text-center text-xs font-medium text-slate-500">Sans engagement · Réponse rapide</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vague de transition vers la section suivante -->
+      <svg class="absolute inset-x-0 bottom-0 h-12 w-full text-white md:h-20" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+        <path fill="currentColor" d="M0 80h1440V28c-180 34-420 52-720 30C420 36 200 6 0 34z"/>
+      </svg>
+    </section>
+
+    <!-- ==========================================================
+         SECTION SERVICES
+         ========================================================== -->
+    <section id="services" class="bg-white py-20 md:py-28">
+      <div class="container-site">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="eyebrow">Nos prestations</p>
+          <h2 class="section-title">Un nettoyage adapté à chaque espace</h2>
+          <p class="mt-4 text-lg text-slate-600">Interventions ponctuelles ou contrats d'entretien réguliers, pour les particuliers comme pour les professionnels.</p>
+        </div>
+
+        <!-- Grille des 4 prestations -->
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+          <!-- Prestation 1 : Bureaux -->
+          <article class="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-aqua/50 hover:shadow-xl hover:shadow-aqua/10">
+            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-aqua-light text-aqua-dark transition-colors duration-300 group-hover:bg-navy group-hover:text-aqua">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/><path d="M10.5 13v1.5h3V13"/>
+              </svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-navy">Entretien régulier de bureaux</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Des bureaux propres et sains chaque jour pour vos équipes et vos visiteurs, selon la fréquence de votre choix.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-700">
+              <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Postes de travail et sols</li>
+              <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sanitaires et espaces de pause</li>
+              <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Passage quotidien, hebdomadaire…</li>
+            </ul>
+            <a href="#devis" data-local="Bureaux / locaux professionnels" data-prestation="Entretien régulier de bureaux" class="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-bold text-aqua-dark hover:text-navy">
+              Demander un devis <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+          </article>
+
+          <!-- Prestation 2 : Copropriétés -->
+          <article class="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-aqua/50 hover:shadow-xl hover:shadow-aqua/10">
+            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-aqua-light text-aqua-dark transition-colors duration-300 group-hover:bg-navy group-hover:text-aqua">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 21h18"/><path d="M5 21V5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v16"/><path d="M14 9h4a1 1 0 0 1 1 1v11"/><path d="M8 8h3M8 12h3M8 16h3M16.5 13h.01M16.5 17h.01"/>
+              </svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-navy">Copropriétés &amp; parties communes</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Halls, cages d'escalier et ascenseurs entretenus avec régularité, pour le confort des résidents et l'image de l'immeuble.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-700">
+              <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Halls d'entrée et paliers</li>
+              <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Escaliers, rampes et ascenseurs</li>
+              <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Planning fixe pour les syndics</li>
+            </ul>
+            <a href="#devis" data-local="Copropriété / parties communes" data-prestation="Nettoyage de parties communes" class="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-bold text-aqua-dark hover:text-navy">
+              Demander un devis <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+          </article>
+
+          <!-- Prestation 3 : Après travaux -->
+          <article class="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-aqua/50 hover:shadow-xl hover:shadow-aqua/10">
+            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-aqua-light text-aqua-dark transition-colors duration-300 group-hover:bg-navy group-hover:text-aqua">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 18h18v1.5a.5.5 0 0 1-.5.5h-17a.5.5 0 0 1-.5-.5z"/><path d="M5 18v-2a7 7 0 0 1 14 0v2"/><path d="M10 9.4V13M14 9.4V13"/><path d="M19 3.5l.7 1.6 1.6.7-1.6.7-.7 1.6-.7-1.6-1.6-.7 1.6-.7z"/>
+              </svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-navy">Remise en état après travaux</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Après un chantier, une rénovation ou avant un emménagement : nous éliminons poussières et salissures tenaces.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-700">
+              <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Dépoussiérage complet</li>
+              <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Traces de plâtre, peinture, colle</li>
+              <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Locaux prêts à être utilisés</li>
+            </ul>
+            <a href="#devis" data-local="Chantier / fin de travaux" data-prestation="Remise en état après travaux" class="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-bold text-aqua-dark hover:text-navy">
+              Demander un devis <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+          </article>
+
+          <!-- Prestation 4 : Vitres -->
+          <article class="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-aqua/50 hover:shadow-xl hover:shadow-aqua/10">
+            <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-aqua-light text-aqua-dark transition-colors duration-300 group-hover:bg-navy group-hover:text-aqua">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M12 3v18M4 12h16"/><path d="M6.8 9.2l2.4-2.4M14.8 17.2l2.4-2.4"/>
+              </svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold text-navy">Lavage de vitres</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Vitres, baies vitrées et vitrines nettoyées sans traces, pour des espaces lumineux et une image soignée.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-700">
+              <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Fenêtres et baies vitrées</li>
+              <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Vitrines de commerces</li>
+              <li class="flex gap-2"><svg class="mt-0.5 h-4 w-4 shrink-0 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Encadrements et rebords</li>
+            </ul>
+            <a href="#devis" data-prestation="Lavage de vitres" class="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-bold text-aqua-dark hover:text-navy">
+              Demander un devis <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+          </article>
+        </div>
+
+        <!-- Bandeau Particuliers / Entreprises -->
+        <div class="mt-12 grid gap-8 rounded-3xl bg-aqua-pale p-6 ring-1 ring-aqua/15 sm:p-10 lg:grid-cols-[1fr_1fr_auto] lg:items-center">
+          <div class="flex gap-4">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-aqua-dark shadow-sm">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9v11h14V9"/><path d="M10 20v-5h4v5"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-navy">Particuliers</h3>
+              <p class="mt-1 text-sm leading-relaxed text-slate-600">Nettoyage après travaux ou avant un déménagement, lavage des vitres de votre maison ou appartement.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-aqua-dark shadow-sm">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2"/><path d="M10 21v-3h4v3"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-navy">Entreprises &amp; syndics</h3>
+              <p class="mt-1 text-sm leading-relaxed text-slate-600">Bureaux, commerces, cabinets, copropriétés : un contrat d'entretien adapté à votre activité.</p>
+            </div>
+          </div>
+          <a href="#devis" class="btn btn-dark w-full lg:w-auto">Obtenir mon devis</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION ENGAGEMENTS ("Pourquoi nous choisir")
+         ========================================================== -->
+    <section id="engagements" class="relative overflow-hidden bg-navy py-20 text-white md:py-28">
+      <div aria-hidden="true" class="pointer-events-none absolute -left-32 top-10 h-96 w-96 rounded-full bg-aqua/15 blur-3xl"></div>
+
+      <div class="container-site relative">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="eyebrow text-sky-300">Nos engagements</p>
+          <h2 class="section-title text-white">Pourquoi choisir DUMICLEAN ?</h2>
+          <p class="mt-4 text-lg text-slate-300">Un partenaire de proximité qui s'engage sur la qualité, la confiance et le respect de vos locaux.</p>
+        </div>
+
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Engagement 1 : Réactivité -->
+          <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-aqua/40 hover:bg-white/[0.07]">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-aqua text-navy">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold">Réactivité</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-300">Nous répondons vite à chaque demande et intervenons dans les meilleurs délais, pour un besoin ponctuel comme régulier.</p>
+          </div>
+
+          <!-- Engagement 2 : Discrétion -->
+          <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-aqua/40 hover:bg-white/[0.07]">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-aqua text-navy">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold">Discrétion</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-300">Nous nous adaptons à vos horaires pour ne pas perturber votre activité, dans le respect de vos locaux et de votre confidentialité.</p>
+          </div>
+
+          <!-- Engagement 3 : Matériel professionnel -->
+          <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-aqua/40 hover:bg-white/[0.07]">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-aqua text-navy">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12 10 9.5h4l2 2.5v8a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1z"/><path d="M10 9.5V5h5.5L17 7"/><path d="M19.5 4h.01M21 7h.01M19.5 10h.01"/></svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold">Matériel professionnel</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-300">Des équipements performants et des produits adaptés à chaque surface, pour un résultat irréprochable et durable.</p>
+          </div>
+
+          <!-- Engagement 4 : Devis sans engagement -->
+          <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-aqua/40 hover:bg-white/[0.07]">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-aqua text-navy">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5"/><path d="M9 14l2 2 4-4"/></svg>
+            </div>
+            <h3 class="mt-5 text-lg font-bold">Devis sans engagement</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-300">Une proposition claire et détaillée, gratuite et sans obligation : vous savez exactement ce que vous payez.</p>
+          </div>
+        </div>
+
+        <!-- Encart éco-responsable -->
+        <div class="mt-8 flex flex-col gap-5 rounded-2xl border border-aqua/30 bg-gradient-to-r from-aqua/15 via-aqua/5 to-emerald-400/10 p-6 sm:flex-row sm:items-center sm:p-8">
+          <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-emerald-400/15 text-emerald-300">
+            <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c1-9 6-14 16-16-1 10-6 15-16 16z"/><path d="M4 20 13 11"/></svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold">Des produits éco-responsables</h3>
+            <p class="mt-1 text-sm leading-relaxed text-slate-300 sm:text-base">Nous privilégions des produits respectueux de l'environnement, de vos équipes et de vos occupants, sans compromis sur le résultat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION ZONE D'INTERVENTION
+         ========================================================== -->
+    <section id="zone" class="bg-white py-20 md:py-28">
+      <div class="container-site grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <p class="eyebrow">Zone d'intervention</p>
+          <h2 class="section-title">Votre entreprise de nettoyage dans le Bas Chablais et le Pays de Gavot</h2>
+          <p class="mt-4 text-lg leading-relaxed text-slate-600">Implantés localement en Haute-Savoie, nous intervenons rapidement chez les particuliers, les entreprises et les copropriétés de tout le secteur.</p>
+
+          <!-- Liste des communes : utile pour le référencement local. À ajuster selon votre zone réelle. -->
+          <div class="mt-8 grid gap-4 sm:grid-cols-2">
+            <div class="rounded-2xl border border-slate-200 p-5">
+              <h3 class="flex items-center gap-2 font-bold text-navy">
+                <svg class="h-5 w-5 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Bas Chablais
+              </h3>
+              <ul class="mt-3 flex flex-wrap gap-2 text-xs font-medium text-slate-600">
+                <li class="rounded-full bg-slate-100 px-2.5 py-1">Douvaine</li>
+                <li class="rounded-full bg-slate-100 px-2.5 py-1">Sciez</li>
+                <li class="rounded-full bg-slate-100 px-2.5 py-1">Bons-en-Chablais</li>
+                <li class="rounded-full bg-slate-100 px-2.5 py-1">Veigy-Foncenex</li>
+                <li class="rounded-full bg-slate-100 px-2.5 py-1">Excenevex</li>
+                <li class="rounded-full bg-slate-100 px-2.5 py-1">Yvoire</li>
+                <li class="rounded-full bg-slate-100 px-2.5 py-1">Messery</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-slate-200 p-5">
+              <h3 class="flex items-center gap-2 font-bold text-navy">
+                <svg class="h-5 w-5 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Pays de Gavot
+              </h3>
+              <ul class="mt-3 flex flex-wrap gap-2 text-xs font-medium text-slate-600">
+                <li class="rounded-full bg-slate-100 px-2.5 py-1">Saint-Paul-en-Chablais</li>
+                <li class="rounded-full bg-slate-100 px-2.5 py-1">Larringes</li>
+                <li class="rounded-full bg-slate-100 px-2.5 py-1">Bernex</li>
+                <li class="rounded-full bg-slate-100 px-2.5 py-1">Thollon-les-Mémises</li>
+                <li class="rounded-full bg-slate-100 px-2.5 py-1">Champanges</li>
+                <li class="rounded-full bg-slate-100 px-2.5 py-1">Féternes</li>
+                <li class="rounded-full bg-slate-100 px-2.5 py-1">Vinzier</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="mt-6 rounded-xl bg-aqua-pale px-4 py-3 text-sm text-slate-700">
+            <strong class="text-navy">Votre commune n'est pas listée ?</strong> Thonon-les-Bains, Évian-les-Bains et alentours : <a href="tel:+33668909338" class="font-bold text-aqua-dark underline decoration-aqua/40 underline-offset-2 hover:text-navy">appelez-nous</a>, nous étudions chaque demande.
+          </p>
+        </div>
+
+        <!-- Carte schématique (illustration, non à l'échelle) -->
+        <figure class="rounded-3xl border border-slate-200 bg-slate-50 p-3 shadow-xl shadow-slate-200/60 sm:p-4">
+          <svg viewBox="0 0 480 360" class="h-auto w-full rounded-2xl" role="img" aria-labelledby="carte-titre">
+            <title id="carte-titre">Carte schématique de la zone d'intervention : Bas Chablais et Pays de Gavot, au sud du Lac Léman</title>
+            <rect width="480" height="360" fill="#F8FAFC"/>
+            <!-- Relief -->
+            <path d="M240 360 L318 252 L362 300 L412 228 L480 316 V360 Z" fill="#E2E8F0"/>
+            <path d="M300 360 L372 278 L420 330 L452 292 L480 326 V360 Z" fill="#CBD5E1" opacity=".6"/>
+            <!-- Lac Léman -->
+            <path d="M0 0 H480 V118 C440 132 400 108 352 128 C300 150 262 122 214 140 C160 160 120 128 72 142 C40 151 16 140 0 134 Z" fill="#BAE6FD"/>
+            <path d="M70 70 q12 -7 24 0 t24 0 M330 52 q12 -7 24 0 t24 0 M180 98 q12 -7 24 0 t24 0" fill="none" stroke="#7DD3FC" stroke-width="2" stroke-linecap="round"/>
+            <text x="240" y="62" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-style="italic" font-weight="600" fill="#0369A1">Lac Léman</text>
+            <!-- Liaison entre les deux secteurs -->
+            <path d="M130 215 Q245 290 350 222" fill="none" stroke="#0EA5E9" stroke-width="2.5" stroke-dasharray="7 7" stroke-linecap="round"/>
+            <!-- Villes repères -->
+            <g font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#64748B">
+              <circle cx="232" cy="170" r="4"/>
+              <text x="232" y="192" text-anchor="middle">Thonon-les-Bains</text>
+              <circle cx="318" cy="150" r="4"/>
+              <text x="318" y="171" text-anchor="middle">Évian-les-Bains</text>
+            </g>
+            <!-- Repère Bas Chablais -->
+            <g transform="translate(130 215)">
+              <circle class="pulse-ring" r="14" fill="#0EA5E9"/>
+              <path d="M0 0 C-6 -9 -15 -17 -15 -28 A15 15 0 1 1 15 -28 C15 -17 6 -9 0 0Z" fill="#0F172A"/>
+              <circle cy="-28" r="5.5" fill="#0EA5E9"/>
+            </g>
+            <text x="130" y="246" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="800" fill="#0F172A" stroke="#F8FAFC" stroke-width="4" paint-order="stroke">Bas Chablais</text>
+            <!-- Repère Pays de Gavot -->
+            <g transform="translate(350 222)">
+              <circle class="pulse-ring" r="14" fill="#0EA5E9" style="animation-delay: 1.2s"/>
+              <path d="M0 0 C-6 -9 -15 -17 -15 -28 A15 15 0 1 1 15 -28 C15 -17 6 -9 0 0Z" fill="#0EA5E9"/>
+              <circle cy="-28" r="5.5" fill="#fff"/>
+            </g>
+            <text x="350" y="253" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="800" fill="#0F172A" stroke="#F8FAFC" stroke-width="4" paint-order="stroke">Pays de Gavot</text>
+            <text x="20" y="342" font-family="system-ui, sans-serif" font-size="11" fill="#64748B">Haute-Savoie (74)</text>
+          </svg>
+          <figcaption class="px-2 pt-3 text-center text-xs text-slate-500">Carte schématique, non à l'échelle.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         BANDEAU D'APPEL
+         ========================================================== -->
+    <section aria-label="Appel rapide" class="bg-aqua">
+      <div class="container-site flex flex-col items-center justify-between gap-6 py-12 text-center md:flex-row md:text-left">
+        <div>
+          <p class="text-2xl font-extrabold tracking-tight text-navy sm:text-3xl">Besoin d'un nettoyage rapidement ?</p>
+          <p class="mt-1 font-medium text-navy/80">Un simple appel suffit pour obtenir votre devis gratuit.</p>
+        </div>
+        <a href="tel:+33668909338" class="btn btn-dark w-full px-8 py-4 text-lg sm:w-auto">
+          <svg class="h-5 w-5 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          06 68 90 93 38
+        </a>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION CONTACT & DEVIS RAPIDE
+         ========================================================== -->
+    <section id="contact" class="bg-slate-50 py-20 md:py-28">
+      <div class="container-site">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="eyebrow">Contact &amp; devis</p>
+          <h2 class="section-title">Demandez votre devis gratuit</h2>
+          <p class="mt-4 text-lg text-slate-600">Décrivez-nous votre besoin : nous revenons vers vous rapidement avec une proposition claire et sans engagement.</p>
+        </div>
+
+        <div class="mt-14 grid gap-8 lg:grid-cols-5">
+
+          <!-- Coordonnées directes -->
+          <aside class="relative overflow-hidden rounded-3xl bg-navy p-6 text-white sm:p-8 lg:col-span-2">
+            <div aria-hidden="true" class="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-aqua/20 blur-3xl"></div>
+            <div class="relative">
+              <p class="text-sm font-semibold text-sky-300">Le plus rapide</p>
+              <p class="mt-1 text-2xl font-extrabold tracking-tight">Appelez-nous directement</p>
+              <a href="tel:+33668909338" class="btn btn-primary mt-5 w-full py-4 text-lg">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                06 68 90 93 38
+              </a>
+
+              <ul class="mt-8 space-y-6">
+                <li class="flex gap-4">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-aqua">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+                  </span>
+                  <div class="min-w-0">
+                    <p class="text-sm text-slate-400">E-mail</p>
+                    <a href="mailto:dumiclean@gmail.com" class="break-all font-semibold hover:text-aqua">dumiclean@gmail.com</a>
+                  </div>
+                </li>
+                <li class="flex gap-4">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-aqua">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </span>
+                  <div>
+                    <p class="text-sm text-slate-400">Zone d'intervention</p>
+                    <p class="font-semibold">Bas Chablais &amp; Pays de Gavot (74)</p>
+                  </div>
+                </li>
+                <li class="flex gap-4">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-aqua">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  </span>
+                  <div>
+                    <p class="text-sm text-slate-400">Horaires</p>
+                    <!-- À adapter à vos horaires réels -->
+                    <p class="font-semibold">Lundi – vendredi : 7h00 – 19h00</p>
+                    <p class="font-semibold">Samedi : sur rendez-vous</p>
+                  </div>
+                </li>
+              </ul>
+
+              <ul class="mt-8 space-y-2 rounded-2xl border border-white/10 bg-white/5 p-5 text-sm text-slate-200">
+                <li class="flex items-center gap-2"><svg class="h-4 w-4 shrink-0 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Devis gratuit et sans engagement</li>
+                <li class="flex items-center gap-2"><svg class="h-4 w-4 shrink-0 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Produits éco-responsables</li>
+                <li class="flex items-center gap-2"><svg class="h-4 w-4 shrink-0 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Intervention rapide</li>
+              </ul>
+            </div>
+          </aside>
+
+          <!-- Formulaire de devis -->
+          <div id="devis" class="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/60 sm:p-8 lg:col-span-3">
+            <p class="text-xl font-extrabold tracking-tight text-navy sm:text-2xl">Devis rapide en ligne</p>
+            <p class="mt-1 text-sm text-slate-500">Les champs marqués d'un <span class="font-bold text-red-600">*</span> sont obligatoires.</p>
+
+            <!-- ======================================================
+                 CONFIGURATION DE L'ENVOI
+                 • Par défaut (data-formspree vide) : le formulaire ouvre la
+                   messagerie du visiteur avec un e-mail pré-rempli (mailto).
+                 • Avec Formspree (recommandé) : créez un formulaire gratuit sur
+                   formspree.io et collez son adresse dans data-formspree,
+                   ex. data-formspree="https://formspree.io/f/abcdwxyz"
+                 ====================================================== -->
+            <form id="devis-form" class="mt-6 space-y-5"
+                  action="mailto:dumiclean@gmail.com" method="POST" enctype="text/plain"
+                  data-formspree=""
+                  data-email="dumiclean@gmail.com">
+
+              <!-- Sujet de l'e-mail reçu via Formspree -->
+              <input type="hidden" name="_subject" value="Nouvelle demande de devis – site DUMICLEAN">
+              <!-- Anti-spam (champ invisible que seuls les robots remplissent) -->
+              <div class="hidden" aria-hidden="true">
+                <label for="gotcha">Ne pas remplir</label>
+                <input type="text" id="gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="nom" class="field-label">Nom <span class="text-red-600">*</span></label>
+                  <input id="nom" name="nom" type="text" class="field" placeholder="Jean Dupont" autocomplete="name" required>
+                </div>
+                <div>
+                  <label for="entreprise" class="field-label">Entreprise <span class="font-normal text-slate-400">(facultatif)</span></label>
+                  <input id="entreprise" name="entreprise" type="text" class="field" placeholder="Nom de la société ou du syndic" autocomplete="organization">
+                </div>
+              </div>
+
+              <div>
+                <label for="telephone" class="field-label">Téléphone <span class="text-red-600">*</span></label>
+                <input id="telephone" name="telephone" type="tel" inputmode="tel" class="field" placeholder="06 00 00 00 00" autocomplete="tel" minlength="10" required>
+              </div>
+
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="type_local" class="field-label">Type de local <span class="text-red-600">*</span></label>
+                  <div class="relative">
+                    <select id="type_local" name="type_local" class="field appearance-none pr-10" required>
+                      <option value="" disabled selected>Sélectionnez…</option>
+                      <option>Bureaux / locaux professionnels</option>
+                      <option>Copropriété / parties communes</option>
+                      <option>Commerce / boutique</option>
+                      <option>Maison / appartement</option>
+                      <option>Chantier / fin de travaux</option>
+                      <option>Autre</option>
+                    </select>
+                    <svg class="pointer-events-none absolute right-3.5 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                  </div>
+                </div>
+                <div>
+                  <label for="surface" class="field-label">Surface approximative</label>
+                  <div class="relative">
+                    <input id="surface" name="surface" type="number" inputmode="numeric" min="1" step="1" class="field pr-12" placeholder="Ex. 120">
+                    <span class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm font-semibold text-slate-400">m²</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label for="message" class="field-label">Votre message</label>
+                <textarea id="message" name="message" rows="4" class="field resize-y" placeholder="Fréquence souhaitée, nombre de pièces ou de vitres, date idéale…"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-full py-4 text-lg">
+                <span data-label>Recevoir mon devis gratuit</span>
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+
+              <!-- Zone de message (succès / erreur), lue par les lecteurs d'écran -->
+              <div id="form-status" class="form-status hidden" role="status" aria-live="polite"></div>
+
+              <p class="flex gap-2 text-xs leading-relaxed text-slate-500">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                <span>Vos informations servent uniquement à répondre à votre demande et ne sont jamais transmises à des tiers. Voir nos <button type="button" data-open-mentions class="font-semibold text-aqua-dark underline underline-offset-2 hover:text-navy">mentions légales</button>.</span>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================
+       PIED DE PAGE
+       ========================================================== -->
+  <footer class="bg-navy text-slate-400">
+    <div class="container-site grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- Marque -->
+      <div>
+        <a href="#accueil" class="flex items-center gap-2.5" aria-label="DUMICLEAN, retour en haut de page">
+          <svg class="h-9 w-9" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="9" fill="#1E293B"/>
+            <path d="M16 5.5c-3.8 4.6-7 8.4-7 12.3a7 7 0 0 0 14 0c0-3.9-3.2-7.7-7-12.3z" fill="#0EA5E9"/>
+            <path d="M12.6 18.6a3.6 3.6 0 0 0 3.2 3.4" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span class="text-xl font-extrabold tracking-tight text-white">DUMI<span class="text-aqua">CLEAN</span></span>
+        </a>
+        <p class="mt-4 text-sm leading-relaxed">Entreprise de nettoyage professionnel pour particuliers et entreprises dans le Bas Chablais et le Pays de Gavot.</p>
+      </div>
+
+      <!-- Coordonnées -->
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-wider text-white">Coordonnées</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="tel:+33668909338" class="font-semibold text-white hover:text-aqua">06 68 90 93 38</a></li>
+          <li><a href="mailto:dumiclean@gmail.com" class="break-all hover:text-aqua">dumiclean@gmail.com</a></li>
+          <li>Lun. – ven. : 7h00 – 19h00</li>
+        </ul>
+      </div>
+
+      <!-- Zone -->
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-wider text-white">Zone d'intervention</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li>Bas Chablais</li>
+          <li>Pays de Gavot</li>
+          <li>Haute-Savoie (74)</li>
+        </ul>
+      </div>
+
+      <!-- Liens -->
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-wider text-white">Navigation</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="#services" class="hover:text-aqua">Services</a></li>
+          <li><a href="#engagements" class="hover:text-aqua">Engagements</a></li>
+          <li><a href="#zone" class="hover:text-aqua">Zone d'intervention</a></li>
+          <li><a href="#contact" class="hover:text-aqua">Contact &amp; devis</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="container-site flex flex-col items-center justify-between gap-3 py-6 text-sm sm:flex-row">
+        <p>© <span id="year">2026</span> DUMICLEAN. Tous droits réservés.</p>
+        <button type="button" data-open-mentions class="underline underline-offset-4 hover:text-white">Mentions légales</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================
+       BARRE D'ACTION FIXE (mobile uniquement)
+       La majorité des clients appellent depuis leur téléphone :
+       le bouton d'appel reste toujours à portée de pouce.
+       ========================================================== -->
+  <div id="mobile-cta" class="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200 bg-white/95 px-3 pt-3 shadow-[0_-8px_24px_rgba(15,23,42,0.08)] backdrop-blur transition-transform duration-300 md:hidden">
+    <div class="grid grid-cols-2 gap-3">
+      <a href="tel:+33668909338" class="btn btn-dark px-3 py-3">
+        <svg class="h-5 w-5 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Appeler
+      </a>
+      <a href="#devis" class="btn btn-primary px-3 py-3">Devis gratuit</a>
+    </div>
+  </div>
+
+  <!-- ==========================================================
+       FENÊTRE MODALE : MENTIONS LÉGALES
+       Complétez les zones surlignées en jaune avant la mise en ligne.
+       ========================================================== -->
+  <dialog id="mentions-legales" aria-labelledby="mentions-titre" class="w-[calc(100%-2rem)] max-w-2xl rounded-2xl bg-white p-0 text-slate-600 shadow-2xl">
+    <div class="flex items-center justify-between border-b border-slate-200 px-6 py-4">
+      <h2 id="mentions-titre" class="text-xl font-extrabold text-navy">Mentions légales</h2>
+      <button type="button" data-close-mentions class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-slate-500 hover:bg-slate-100 hover:text-navy focus:outline-none focus-visible:ring-4 focus-visible:ring-aqua/30" aria-label="Fermer les mentions légales">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="max-h-[65vh] space-y-6 overflow-y-auto px-6 py-6 text-sm leading-relaxed">
+      <section>
+        <h3 class="font-bold text-navy">Éditeur du site</h3>
+        <p class="mt-2">
+          <strong>DUMICLEAN</strong> – <span class="a-completer">[Forme juridique : entreprise individuelle, SARL…]</span><br>
+          Siège : <span class="a-completer">[Adresse complète]</span><br>
+          SIRET : <span class="a-completer">[N° SIRET]</span><br>
+          TVA : <span class="a-completer">[N° de TVA intracommunautaire ou « TVA non applicable, art. 293 B du CGI »]</span><br>
+          Téléphone : <a href="tel:+33668909338" class="text-aqua-dark underline">06 68 90 93 38</a><br>
+          E-mail : <a href="mailto:dumiclean@gmail.com" class="text-aqua-dark underline">dumiclean@gmail.com</a><br>
+          Directeur de la publication : <span class="a-completer">[Prénom et nom du dirigeant]</span>
+        </p>
+      </section>
+
+      <section>
+        <h3 class="font-bold text-navy">Hébergement</h3>
+        <p class="mt-2"><span class="a-completer">[Nom de l'hébergeur – adresse – téléphone]</span></p>
+      </section>
+
+      <section>
+        <h3 class="font-bold text-navy">Propriété intellectuelle</h3>
+        <p class="mt-2">L'ensemble des contenus de ce site (textes, logo, illustrations, mise en page) est la propriété de DUMICLEAN. Toute reproduction, totale ou partielle, sans autorisation écrite préalable est interdite.</p>
+      </section>
+
+      <section>
+        <h3 class="font-bold text-navy">Données personnelles (RGPD)</h3>
+        <p class="mt-2">Les informations transmises via le formulaire de devis (nom, entreprise, téléphone, type de local, surface, message) sont utilisées uniquement par DUMICLEAN pour traiter votre demande et vous recontacter. Elles ne sont ni vendues ni cédées à des tiers et sont conservées au maximum 3 ans après le dernier contact. Si le formulaire est traité par un service d'envoi (par exemple Formspree), ce prestataire agit en tant que sous-traitant.</p>
+        <p class="mt-2">Conformément au RGPD et à la loi « Informatique et Libertés », vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition et de limitation du traitement de vos données. Pour l'exercer, écrivez à <a href="mailto:dumiclean@gmail.com" class="text-aqua-dark underline">dumiclean@gmail.com</a>. Vous pouvez également introduire une réclamation auprès de la CNIL (cnil.fr).</p>
+      </section>
+
+      <section>
+        <h3 class="font-bold text-navy">Cookies</h3>
+        <p class="mt-2">Ce site n'utilise aucun cookie publicitaire ni outil de mesure d'audience.</p>
+      </section>
+
+      <section>
+        <h3 class="font-bold text-navy">Médiation de la consommation</h3>
+        <p class="mt-2">Conformément au Code de la consommation, le client particulier peut recourir gratuitement au médiateur suivant : <span class="a-completer">[Nom et coordonnées du médiateur de la consommation]</span>.</p>
+      </section>
+
+      <section>
+        <h3 class="font-bold text-navy">Responsabilité</h3>
+        <p class="mt-2">Les informations présentes sur ce site sont fournies à titre indicatif. Seul le devis remis au client a une valeur contractuelle.</p>
+      </section>
+    </div>
+
+    <div class="flex justify-end border-t border-slate-200 px-6 py-4">
+      <button type="button" data-close-mentions class="btn btn-dark px-5 py-2.5 text-sm">Fermer</button>
+    </div>
+  </dialog>
+
+  <!-- ==========================================================
+       SCRIPTS (JavaScript natif, sans dépendance)
+       ========================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ---------- 1. Année automatique dans le pied de page ---------- */
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      /* ---------- 2. Ombre de l'en-tête au défilement ---------- */
+      var header = document.getElementById('site-header');
+      var onScroll = function () { header.classList.toggle('shadow-lg', window.scrollY > 8); };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      /* ---------- 3. Menu mobile ---------- */
+      var toggle = document.getElementById('menu-toggle');
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = document.getElementById('icon-open');
+      var iconClose = document.getElementById('icon-close');
+
+      function setMenu(open) {
+        menu.classList.toggle('hidden', !open);
+        iconOpen.classList.toggle('hidden', open);
+        iconClose.classList.toggle('hidden', !open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+      }
+      toggle.addEventListener('click', function () { setMenu(menu.classList.contains('hidden')); });
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () { setMenu(false); });
+      });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+      window.matchMedia('(min-width: 768px)').addEventListener('change', function (e) { if (e.matches) setMenu(false); });
+
+      /* ---------- 4. Lien actif dans le menu selon la section visible ---------- */
+      var navLinks = document.querySelectorAll('.nav-link');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            navLinks.forEach(function (link) {
+              link.classList.toggle('is-active', link.getAttribute('href') === '#' + entry.target.id);
+            });
+          });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        ['accueil', 'services', 'engagements', 'zone', 'contact'].forEach(function (id) {
+          var section = document.getElementById(id);
+          if (section) observer.observe(section);
+        });
+      }
+
+      /* ---------- 5. Pré-remplissage du formulaire depuis les cartes services ---------- */
+      var form = document.getElementById('devis-form');
+      document.querySelectorAll('[data-prestation]').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (link.dataset.local) form.type_local.value = link.dataset.local;
+          if (!form.message.value.trim()) form.message.value = 'Prestation souhaitée : ' + link.dataset.prestation + '\n';
+        });
+      });
+
+      /* ---------- 6. Envoi du formulaire (Formspree ou mailto) ---------- */
+      var statusBox = document.getElementById('form-status');
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var submitLabel = submitBtn.querySelector('[data-label]');
+      var defaultLabel = submitLabel.textContent;
+      var PHONE_HTML = '<a href="tel:+33668909338" class="font-bold underline">06 68 90 93 38</a>';
+
+      function showStatus(type, html) {
+        statusBox.className = 'form-status status-' + type;
+        statusBox.innerHTML = html;
+      }
+
+      function setLoading(loading) {
+        submitBtn.disabled = loading;
+        submitBtn.classList.toggle('opacity-70', loading);
+        submitLabel.textContent = loading ? 'Envoi en cours…' : defaultLabel;
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (form._gotcha.value) return; // robot détecté : on ignore
+
+        var data = new FormData(form);
+        var endpoint = (form.dataset.formspree || '').trim();
+
+        // --- Mode Formspree ---
+        if (endpoint) {
+          setLoading(true);
+          fetch(endpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
+            .then(function (res) {
+              if (!res.ok) throw new Error('HTTP ' + res.status);
+              form.reset();
+              showStatus('success', '<strong>Merci, votre demande a bien été envoyée !</strong><br>Nous vous recontactons très rapidement. Pour une urgence : ' + PHONE_HTML + '.');
+            })
+            .catch(function () {
+              showStatus('error', '<strong>L\'envoi n\'a pas abouti.</strong><br>Appelez-nous au ' + PHONE_HTML + ' ou écrivez à <a href="mailto:' + form.dataset.email + '" class="font-bold underline">' + form.dataset.email + '</a>.');
+            })
+            .finally(function () { setLoading(false); });
+          return;
+        }
+
+        // --- Mode mailto (par défaut) : e-mail pré-rempli dans la messagerie du visiteur ---
+        var get = function (name) { return String(data.get(name) || '').trim(); };
+        var subject = 'Demande de devis – ' + get('type_local') + ' – ' + get('nom');
+        var body = [
+          'Bonjour,',
+          '',
+          'Je souhaite recevoir un devis gratuit.',
+          '',
+          'Nom : ' + get('nom'),
+          'Entreprise : ' + (get('entreprise') || '-'),
+          'Téléphone : ' + get('telephone'),
+          'Type de local : ' + get('type_local'),
+          'Surface approximative : ' + (get('surface') ? get('surface') + ' m²' : 'non précisée'),
+          '',
+          'Message :',
+          get('message') || '-'
+        ].join('\r\n');
+
+        window.location.href = 'mailto:' + form.dataset.email +
+          '?subject=' + encodeURIComponent(subject) +
+          '&body=' + encodeURIComponent(body);
+
+        showStatus('info', '<strong>Votre messagerie s\'ouvre avec votre demande pré-remplie.</strong><br>Il ne vous reste qu\'à cliquer sur « Envoyer ». Rien ne s\'ouvre ? Appelez-nous au ' + PHONE_HTML + '.');
+      });
+
+      /* ---------- 7. Barre mobile masquée pendant la saisie (clavier ouvert) ---------- */
+      var mobileCta = document.getElementById('mobile-cta');
+      form.addEventListener('focusin', function () { mobileCta.classList.add('translate-y-full'); });
+      form.addEventListener('focusout', function () { mobileCta.classList.remove('translate-y-full'); });
+
+      /* ---------- 8. Fenêtre modale des mentions légales ---------- */
+      var dialog = document.getElementById('mentions-legales');
+      document.querySelectorAll('[data-open-mentions]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (typeof dialog.showModal === 'function') {
+            dialog.showModal();
+            document.body.classList.add('overflow-hidden');
+          } else {
+            dialog.setAttribute('open', ''); // anciens navigateurs
+          }
+        });
+      });
+      document.querySelectorAll('[data-close-mentions]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (typeof dialog.close === 'function') dialog.close(); else dialog.removeAttribute('open');
+        });
+      });
+      dialog.addEventListener('close', function () { document.body.classList.remove('overflow-hidden'); });
+      // Fermeture en cliquant sur le fond assombri
+      dialog.addEventListener('click', function (e) { if (e.target === dialog) dialog.close(); });
+    })();
+  </script>
+</body>
+</html>
