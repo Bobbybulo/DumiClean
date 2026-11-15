@@ -32,8 +32,10 @@
 
   <meta name="theme-color" content="#0F172A">
 
-  <!-- Favicon (goutte d'eau) intégré en SVG : aucun fichier externe nécessaire -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230F172A'/%3E%3Cpath d='M16 5.5c-3.8 4.6-7 8.4-7 12.3a7 7 0 0 0 14 0c0-3.9-3.2-7.7-7-12.3z' fill='%230EA5E9'/%3E%3C/svg%3E">
+  <!-- Icônes du site : onglet du navigateur et écran d'accueil des smartphones -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
   <!-- Données structurées LocalBusiness : aident Google à afficher l'entreprise
        dans les résultats locaux. Ajoutez "url" et "address" complète dès que possible. -->
@@ -165,11 +167,8 @@
 
       <!-- Logo -->
       <a href="#accueil" class="flex shrink-0 items-center gap-2.5" aria-label="DUMICLEAN, retour en haut de page">
-        <svg class="h-9 w-9 md:h-10 md:w-10" viewBox="0 0 32 32" aria-hidden="true">
-          <rect width="32" height="32" rx="9" fill="#0F172A"/>
-          <path d="M16 5.5c-3.8 4.6-7 8.4-7 12.3a7 7 0 0 0 14 0c0-3.9-3.2-7.7-7-12.3z" fill="#0EA5E9"/>
-          <path d="M12.6 18.6a3.6 3.6 0 0 0 3.2 3.4" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
+        <!-- Icône du logo (fond transparent) -->
+        <img src="images/logo-icone.webp" alt="" width="290" height="144" class="h-8 w-auto md:h-11">
         <span class="text-lg font-extrabold tracking-tight text-navy xs:text-xl">DUMI<span class="text-aqua">CLEAN</span></span>
       </a>
 
@@ -774,11 +773,9 @@
       <!-- Marque -->
       <div>
         <a href="#accueil" class="flex items-center gap-2.5" aria-label="DUMICLEAN, retour en haut de page">
-          <svg class="h-9 w-9" viewBox="0 0 32 32" aria-hidden="true">
-            <rect width="32" height="32" rx="9" fill="#1E293B"/>
-            <path d="M16 5.5c-3.8 4.6-7 8.4-7 12.3a7 7 0 0 0 14 0c0-3.9-3.2-7.7-7-12.3z" fill="#0EA5E9"/>
-            <path d="M12.6 18.6a3.6 3.6 0 0 0 3.2 3.4" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
+          <span class="flex items-center rounded-xl bg-white px-2.5 py-1.5">
+            <img src="images/logo-icone.webp" alt="" width="290" height="144" class="h-8 w-auto" loading="lazy">
+          </span>
           <span class="text-xl font-extrabold tracking-tight text-white">DUMI<span class="text-aqua">CLEAN</span></span>
         </a>
         <p class="mt-4 text-sm leading-relaxed">Entreprise de nettoyage professionnel pour particuliers et entreprises dans le Bas Chablais et le Pays de Gavot.</p>
