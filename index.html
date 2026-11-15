@@ -67,6 +67,11 @@
   }
   </script>
 
+  <!-- Police des titres du haut de page : Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap">
+
   <!-- ==========================================================
        TAILWIND CSS (CDN) + couleurs de la marque
        ========================================================== -->
@@ -77,6 +82,9 @@
         // Points de rupture redéfinis pour ajouter "xs" (petits smartphones) dans le bon ordre
         screens: { xs: '380px', sm: '640px', md: '768px', lg: '1024px', xl: '1280px', '2xl': '1536px' },
         extend: {
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] // Classe "font-display"
+          },
           colors: {
             navy: { DEFAULT: '#0F172A', light: '#1E293B' },          // Bleu marine : sérieux
             aqua: { DEFAULT: '#0EA5E9', dark: '#0369A1', light: '#E0F2FE', pale: '#F0F9FF' } // Cyan : fraîcheur
@@ -215,7 +223,7 @@
         <div class="hidden lg:block">
           <span class="absolute left-[4%] top-[18%] h-3 w-3 rounded-full border border-white/30"></span>
           <span class="absolute left-[52%] top-[12%] h-2 w-2 rounded-full bg-aqua/60"></span>
-          <span class="absolute bottom-[18%] left-[44%] h-5 w-5 rounded-full border border-aqua/40"></span>
+          <span class="absolute bottom-[12%] left-[58%] h-5 w-5 rounded-full border border-aqua/40"></span>
           <span class="absolute right-[3%] top-[62%] h-2.5 w-2.5 rounded-full bg-white/30"></span>
         </div>
       </div>
@@ -223,28 +231,28 @@
       <div class="container-site relative grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
         <!-- Accroche -->
         <div class="lg:col-span-7">
-          <!-- Le H1 associe mots-clés locaux (SEO) et promesse client (conversion) -->
+          <!-- Le H1 associe zone géographique (SEO local) et promesse client (conversion) -->
           <h1>
-            <span class="mb-5 flex w-fit items-center gap-2 rounded-full border border-aqua/30 bg-aqua/10 px-3.5 py-1.5 text-xs font-semibold text-sky-300 sm:text-sm">
+            <span class="mb-6 flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold text-sky-400 sm:text-sm">
               <svg class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Nettoyage professionnel · Bas Chablais &amp; Pays de Gavot
+              Intervention rapide&nbsp;: Bas Chablais &amp; Pays de Gavot
             </span>
-            <span class="block text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
-              Des locaux impeccables, <span class="text-aqua">sans effort</span> de votre part.
+            <span class="block font-display text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
+              Des locaux impeccables et sains, <span class="text-aqua">sans contrainte.</span>
             </span>
           </h1>
 
-          <p class="mt-5 max-w-2xl text-base leading-relaxed text-slate-300 xs:text-lg sm:mt-6 sm:text-xl">
-            Bureaux, copropriétés, fin de chantier ou vitres : <strong class="font-semibold text-white">DUMICLEAN</strong> prend en charge la propreté de vos espaces dans le <strong class="font-semibold text-white">Bas Chablais</strong> et le <strong class="font-semibold text-white">Pays de Gavot</strong>, pour les particuliers comme pour les entreprises.
+          <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate-300 xs:text-lg">
+            DUMICLEAN accompagne les <strong class="font-semibold text-white">entreprises, syndics de copropriété et particuliers</strong> dans le <strong class="font-semibold text-white">Bas Chablais et le Pays de Gavot</strong>. Un service sur mesure, des produits éco-responsables et une réactivité garantie.
           </p>
 
           <!-- Appels à l'action -->
-          <div class="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row">
-            <a href="#devis" class="btn btn-primary w-full px-7 py-4 text-lg sm:w-auto">
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+            <a href="#devis" class="btn w-full bg-aqua px-7 py-4 font-display text-white shadow-lg shadow-aqua/30 hover:bg-sky-600 focus-visible:ring-aqua/40 sm:w-auto">
               Demander un devis gratuit
               <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-            <a href="tel:+33668909338" class="btn btn-ghost w-full px-7 py-4 text-lg sm:w-auto">
+            <a href="tel:+33668909338" class="btn w-full border border-white/15 bg-white/10 px-7 py-4 font-display text-white hover:bg-white/15 focus-visible:ring-white/30 sm:w-auto">
               <svg class="h-5 w-5 text-aqua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               Appeler maintenant
             </a>
