@@ -1,0 +1,74 @@
+/*
+ * Feuille de style source du site DumiClean.
+ * Ne pas modifier css/style.css directement : il est généré à partir de ce fichier
+ * avec la commande "npm run build" (voir README.md).
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Police des titres, hébergée sur le site (aucun appel à Google Fonts) */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/plus-jakarta-sans-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../fonts/plus-jakarta-sans-800.woff2') format('woff2');
+}
+
+@layer base {
+  html { scroll-padding-top: 4.5rem; -webkit-tap-highlight-color: transparent; }
+  @media (min-width: 768px) { html { scroll-padding-top: 5.5rem; } }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+  body { @apply bg-white text-slate-700 antialiased; }
+  ::selection { @apply bg-aqua text-navy; }
+}
+
+@layer components {
+  .container-site { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .eyebrow { @apply text-xs font-bold uppercase tracking-[0.2em] text-aqua-dark sm:text-sm; }
+  .section-title { @apply mt-3 text-3xl font-extrabold tracking-tight text-navy sm:text-4xl; }
+
+  /* Boutons */
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-base font-bold transition duration-200 focus:outline-none focus-visible:ring-4 active:scale-[0.98]; }
+  .btn-primary { @apply bg-aqua text-navy shadow-lg shadow-aqua/30 hover:bg-sky-400 focus-visible:ring-aqua/40; }
+  .btn-dark { @apply bg-navy text-white hover:bg-navy-light focus-visible:ring-navy/30; }
+  .btn-ghost { @apply border border-white/25 bg-white/5 text-white hover:bg-white/10 focus-visible:ring-white/30; }
+
+  /* Liens de navigation avec soulignement animé */
+  .nav-link { @apply relative py-2 transition-colors hover:text-navy; }
+  .nav-link::after { content: ''; @apply absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 rounded-full bg-aqua transition-transform duration-300; }
+  .nav-link:hover::after, .nav-link.is-active::after { @apply scale-x-100; }
+  .nav-link.is-active { @apply text-navy; }
+
+  /* Formulaire */
+  .field-label { @apply mb-1.5 block text-sm font-semibold text-navy; }
+  .field { @apply block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-navy shadow-sm transition placeholder:text-slate-400 focus:border-aqua focus:outline-none focus:ring-4 focus:ring-aqua/20; }
+
+  /* Messages de retour du formulaire */
+  .form-status { @apply rounded-xl border p-4 text-sm leading-relaxed; }
+  .status-success { @apply border-emerald-200 bg-emerald-50 text-emerald-900; }
+  .status-error { @apply border-red-200 bg-red-50 text-red-900; }
+  .status-info { @apply border-sky-200 bg-sky-50 text-sky-900; }
+
+  /* Repère visuel des informations à compléter dans les mentions légales */
+  .a-completer { @apply rounded bg-amber-100 px-1 font-medium text-amber-900; }
+}
+
+/* Styles hors Tailwind : fond de la modale, animation des repères sur la carte */
+dialog::backdrop { background: rgba(15, 23, 42, .75); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+@keyframes pulse-ring { 0% { transform: scale(.5); opacity: .55; } 100% { transform: scale(2.6); opacity: 0; } }
+.pulse-ring { transform-box: fill-box; transform-origin: center; animation: pulse-ring 2.4s ease-out infinite; }
+#mobile-cta { padding-bottom: max(.75rem, env(safe-area-inset-bottom)); }
+@media (prefers-reduced-motion: reduce) {
+  .pulse-ring { animation: none; opacity: 0; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}

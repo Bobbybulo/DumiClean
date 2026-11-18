@@ -1,0 +1,9 @@
+# Réglages de publication GitHub Pages : ces fichiers servent à préparer le site
+# mais n'ont pas besoin d'être publiés en ligne.
+exclude:
+  - README.md
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - src
+  - node_modules

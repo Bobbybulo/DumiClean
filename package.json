@@ -1,0 +1,11 @@
+{
+  "name": "dumiclean-site",
+  "private": true,
+  "description": "Site vitrine DumiClean : génération de la feuille de style",
+  "scripts": {
+    "build": "tailwindcss -c tailwind.config.js -i src/style.css -o css/style.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.16"
+  }
+}
